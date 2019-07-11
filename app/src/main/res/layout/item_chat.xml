@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="13dp">
+
+    <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+            android:id="@+id/left_rlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_userhead_left"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_person_header_left"/>
+        <ImageView
+                android:id="@+id/iv_voice_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/iv_userhead_left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_chatfrom_voice_playing"/>
+        <LinearLayout
+                android:id="@+id/bubble_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/iv_userhead_left"
+                android:background="@drawable/select_received_chatfrom">
+
+
+            <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_send_ch_content"
+                    android:text="我是汉语"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_send_wei_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我是维语"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/right_rlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_userhead_right"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_person_header_right"/>
+
+        <ImageView
+                android:id="@+id/iv_voice_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/iv_userhead_right"
+                android:src="@mipmap/ic_send_chatto_voice_playing"/>
+
+        <LinearLayout
+                android:id="@+id/bubble_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:layout_toLeftOf="@id/iv_userhead_right"
+                android:background="@drawable/select_received_chatto">
+            <TextView
+                    android:id="@+id/tv_to_wei_content"
+                    android:text="我维语"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/tv_to_ch_content"
+                    android:layout_marginTop="10dp"
+                    android:text="我是汉语"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
